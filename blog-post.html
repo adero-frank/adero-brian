@@ -1,0 +1,380 @@
+<html lang="en" class="h-full scroll-smooth"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Understanding Corporate Governance in Kenya — Brian Adero</title>
+<meta name="description" content="A comprehensive guide to corporate governance frameworks and compliance requirements for businesses operating in Kenya.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Instrument Serif', 'serif'],
+      },
+      colors: {
+        gold: {
+          100: '#F9F1D8',
+          200: '#EADBB6',
+          300: '#DBC595',
+          400: '#CCB076',
+          500: '#BF9B59',
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #09090b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  /* Nav container styles */
+  .nav-container {
+    background: #09090b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+</style>
+</head>
+<body class="h-full bg-zinc-950 text-zinc-300 antialiased selection:bg-white/20 selection:text-white">
+
+    <!-- Gradient Background -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] opacity-20"></div>
+        <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-stone-500/5 rounded-full blur-[120px] opacity-20"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="fixed top-0 left-0 right-0 z-40 flex justify-center pt-6 transition-all duration-300">
+        <div class="nav-container rounded-full px-6 py-3 flex items-center gap-8 shadow-2xl max-w-7xl mx-auto">
+            <a href="index.html" class="font-serif text-xl text-white italic tracking-tight hover:text-white/80 transition-colors">B. Adero</a>
+            <div class="hidden sm:flex items-center gap-6 text-xs font-medium tracking-wide uppercase text-zinc-400">
+                <a href="index.html" class="nav-link hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="nav-link hover:text-white transition-colors">About</a>
+                <a href="practice-areas.html" class="nav-link hover:text-white transition-colors">Practice Areas</a>
+                <a href="blog.html" class="nav-link hover:text-white transition-colors">Blog</a>
+            </div>
+            <a href="contact.html" class="text-xs font-semibold bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition-colors">
+                Contact
+            </a>
+            <button id="mobileMenuBtn" class="sm:hidden p-2 text-white hover:text-zinc-300 transition-colors" aria-label="Toggle menu">
+                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-30 bg-zinc-950/95 backdrop-blur-md sm:hidden">
+        <div class="flex flex-col items-center justify-center h-full gap-8 px-6">
+            <a href="index.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Home</a>
+            <a href="about.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">About</a>
+            <a href="practice-areas.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Practice Areas</a>
+            <a href="blog.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Blog</a>
+            <a href="contact.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <!-- Blog Post Header -->
+    <article class="relative z-10 pt-32 pb-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <a href="blog.html" class="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors mb-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m12 19-7-7 7-7"></path>
+                    <path d="M19 12H5"></path>
+                </svg>
+                Back to Blog
+            </a>
+            
+            <div class="mb-6">
+                <span class="inline-block px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs text-zinc-400 uppercase tracking-wider">Corporate Law</span>
+            </div>
+            
+            <h1 class="font-serif text-4xl md:text-6xl text-white tracking-tight mb-6">
+                Understanding Corporate Governance in Kenya
+            </h1>
+            
+            <div class="flex items-center gap-4 text-sm text-zinc-400 mb-8">
+                <span>March 15, 2025</span>
+                <span>•</span>
+                <span>5 min read</span>
+                <span>•</span>
+                <span>By Brian Adero</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Blog Post Content -->
+    <article class="relative z-10 pb-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="prose prose-invert prose-zinc max-w-none">
+                <div class="aspect-video bg-zinc-900 rounded-xl mb-12 overflow-hidden">
+                    <div class="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-950 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-700">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="space-y-6 text-zinc-300 leading-relaxed">
+                    <p class="text-lg text-zinc-200">
+                        Corporate governance is a critical framework that ensures businesses operate with transparency, accountability, and ethical standards. For companies operating in Kenya, understanding and implementing proper corporate governance practices is not just a legal requirement but a strategic imperative for long-term success.
+                    </p>
+
+                    <h2 class="font-serif text-3xl text-white mt-12 mb-6">The Legal Framework</h2>
+                    <p>
+                        Kenya's corporate governance framework is primarily governed by the Companies Act, 2015, which sets out the legal obligations for companies. The Act requires companies to maintain proper books of accounts, hold annual general meetings, and ensure proper disclosure of financial information.
+                    </p>
+
+                    <h2 class="font-serif text-3xl text-white mt-12 mb-6">Key Principles</h2>
+                    <p>
+                        Effective corporate governance in Kenya is built on several key principles:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Transparency in operations and decision-making</li>
+                        <li>Accountability of directors and officers</li>
+                        <li>Fair treatment of all stakeholders</li>
+                        <li>Responsibility for corporate actions</li>
+                    </ul>
+
+                    <h2 class="font-serif text-3xl text-white mt-12 mb-6">Compliance Requirements</h2>
+                    <p>
+                        Companies must comply with various regulatory requirements, including filing annual returns, maintaining proper corporate records, and ensuring that board decisions are properly documented. Failure to comply can result in significant penalties and legal consequences.
+                    </p>
+
+                    <h2 class="font-serif text-3xl text-white mt-12 mb-6">Best Practices</h2>
+                    <p>
+                        Implementing best practices in corporate governance involves establishing clear policies, ensuring board diversity, maintaining independent oversight, and fostering a culture of ethical conduct throughout the organization. Regular audits and reviews help identify areas for improvement.
+                    </p>
+
+                    <div class="glass-card p-8 rounded-xl border border-white/10 my-12">
+                        <p class="font-serif text-xl text-white italic mb-4">
+                            "Good corporate governance is not just about compliance—it's about building trust with stakeholders and creating sustainable value for all parties involved."
+                        </p>
+                        <p class="text-zinc-400 text-sm">— Brian Adero, Advocate of the High Court</p>
+                    </div>
+
+                    <h2 class="font-serif text-3xl text-white mt-12 mb-6">Conclusion</h2>
+                    <p>
+                        Understanding and implementing proper corporate governance is essential for any business operating in Kenya. It not only ensures legal compliance but also builds trust with stakeholders, enhances reputation, and contributes to long-term business success. Companies should seek professional legal counsel to ensure they meet all requirements and implement best practices.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Share Section -->
+            <div class="mt-16 pt-8 border-t border-white/10">
+                <div class="flex items-center justify-between flex-wrap gap-4">
+                    <div>
+                        <p class="text-sm text-zinc-400 mb-3">Share this article</p>
+                        <div class="flex items-center gap-4">
+                            <a href="#" class="p-2 rounded-full bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="p-2 rounded-full bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="p-2 rounded-full bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                                    <polyline points="16 6 12 2 8 6"></polyline>
+                                    <line x1="12" y1="2" x2="12" y2="15"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="px-6 py-3 bg-white text-zinc-950 rounded-full text-sm font-semibold hover:bg-zinc-200 transition-colors">
+                        Get Legal Advice
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Posts -->
+    <section class="relative z-10 py-16 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-serif text-3xl text-white mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="blog.html" class="group glass-card rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-all">
+                    <div class="aspect-video bg-zinc-900"></div>
+                    <div class="p-6">
+                        <span class="text-xs text-zinc-500 uppercase tracking-wider">Civil Litigation</span>
+                        <h3 class="font-serif text-xl text-white mt-3 group-hover:text-white/90 transition-colors">Recent Changes in Contract Law</h3>
+                    </div>
+                </a>
+                <a href="blog.html" class="group glass-card rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-all">
+                    <div class="aspect-video bg-zinc-900"></div>
+                    <div class="p-6">
+                        <span class="text-xs text-zinc-500 uppercase tracking-wider">Real Estate</span>
+                        <h3 class="font-serif text-xl text-white mt-3 group-hover:text-white/90 transition-colors">Property Conveyancing Guide</h3>
+                    </div>
+                </a>
+                <a href="blog.html" class="group glass-card rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-all">
+                    <div class="aspect-video bg-zinc-900"></div>
+                    <div class="p-6">
+                        <span class="text-xs text-zinc-500 uppercase tracking-wider">Family Law</span>
+                        <h3 class="font-serif text-xl text-white mt-3 group-hover:text-white/90 transition-colors">Navigating Divorce Proceedings</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-16 border-t border-white/5 bg-zinc-950/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <h3 class="font-serif text-xl text-white mb-4">Brian Adero</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                        Advocate of the High Court dedicated to delivering strategic legal solutions with unwavering integrity.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs text-zinc-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Nairobi, Kenya</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-sm text-zinc-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-sm text-zinc-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="blog.html" class="text-sm text-zinc-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-sm text-zinc-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Practice Areas -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Practice Areas</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Corporate Law</a></li>
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Civil Litigation</a></li>
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Family Law</a></li>
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Real Estate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Get In Touch</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="tel:+254721485244" class="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>+254 721 485244</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:omongeadero@gmail.com" class="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                </svg>
+                                <span>omongeadero@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-sm text-white hover:text-zinc-300 transition-colors mt-4">
+                                <span>Schedule Consultation</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-white/5">
+                <div class="text-center">
+                    <p class="text-xs text-zinc-500">© 2025 Brian Adero. All rights reserved. | <a href="privacy-policy.html" class="hover:text-zinc-400 transition-colors">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                if (mobileMenu.classList.contains('open')) {
+                    menuIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
+
+</body></html>
+

@@ -1,0 +1,575 @@
+<html lang="en" class="h-full scroll-smooth"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Brian Adero, Advocate of the High Court</title>
+<meta name="description" content="Contact Brian Adero, Advocate of the High Court. Schedule a confidential consultation for your legal matter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Instrument Serif', 'serif'],
+      },
+      colors: {
+        gold: {
+          100: '#F9F1D8',
+          200: '#EADBB6',
+          300: '#DBC595',
+          400: '#CCB076',
+          500: '#BF9B59',
+        }
+      },
+      animation: {
+        'fade-in': 'fadeIn 1s ease-out forwards',
+        'slide-up': 'slideUp 1s ease-out forwards',
+        'scale-in': 'scaleIn 1s ease-out forwards',
+        'shimmer': 'shimmer 2s linear infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.98)' },
+          '100%': { opacity: '1', transform: 'scale(1)' }
+        },
+        shimmer: {
+          from: { backgroundPosition: '0 0' },
+          to: { backgroundPosition: '-200% 0' }
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+  /* Custom scrollbar for premium feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #09090b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Animation classes for IntersectionObserver */
+  .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .scale-in-on-scroll {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .scale-in-on-scroll.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Sticky nav styles */
+  /* Nav container styles */
+  .nav-container {
+    background: #09090b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Mobile menu styles */
+  .mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+  
+  /* Back to top button */
+  .back-to-top {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Remove all spacing from contact form */
+  #contactForm {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  #contactForm button[type="submit"] {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Remove bottom padding from form container and wrapper */
+  #contactFormContainer {
+    padding-bottom: 0 !important;
+  }
+  
+  #contactFormContainer > .relative.z-10 {
+    padding-bottom: 0 !important;
+  }
+</style>
+</head>
+<body class="h-full bg-zinc-950 text-zinc-300 antialiased selection:bg-white/20 selection:text-white">
+
+    <!-- Gradient Background Ambience -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] opacity-20"></div>
+        <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-stone-500/5 rounded-full blur-[120px] opacity-20"></div>
+    </div>
+
+    <!-- Status Indicator (Floating) -->
+    <div class="fixed top-6 right-6 z-50 hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/50 border border-zinc-800 backdrop-blur-md animate-fade-in" style="animation-delay: 1.5s;">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="text-xs font-medium text-zinc-300 tracking-wide">Accepting new clients</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="fixed top-0 left-0 right-0 z-40 flex justify-center pt-6 transition-all duration-300">
+        <div class="nav-container rounded-full px-6 py-3 flex items-center gap-8 shadow-2xl max-w-7xl mx-auto">
+            <a href="index.html" class="font-serif text-xl text-white italic tracking-tight hover:text-white/80 transition-colors">B. Adero</a>
+            <div class="hidden sm:flex items-center gap-6 text-xs font-medium tracking-wide uppercase text-zinc-400">
+                <a href="index.html" class="nav-link hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="nav-link hover:text-white transition-colors">About</a>
+                <a href="practice-areas.html" class="nav-link hover:text-white transition-colors">Practice Areas</a>
+                <a href="blog.html" class="nav-link hover:text-white transition-colors">Blog</a>
+            </div>
+            <a href="index.html" class="text-xs font-semibold bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition-colors">
+                Home
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="sm:hidden p-2 text-white hover:text-zinc-300 transition-colors" aria-label="Toggle menu">
+                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-30 bg-zinc-950/95 backdrop-blur-md sm:hidden">
+        <div class="flex flex-col items-center justify-center h-full gap-8 px-6">
+            <a href="index.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Home</a>
+            <a href="about.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">About</a>
+            <a href="practice-areas.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Practice Areas</a>
+            <a href="blog.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Blog</a>
+        </div>
+    </div>
+
+    <!-- Contact Hero Section -->
+    <section class="relative z-10 pt-32 pb-16 px-6 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="Professional Business Meeting" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-zinc-950/60"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto text-center fade-in-on-scroll">
+            <h1 class="font-serif text-4xl md:text-6xl text-white tracking-tight mb-6">
+                Get In Touch
+            </h1>
+            <p class="text-zinc-400 max-w-2xl mx-auto font-light text-lg">
+                Legal challenges require prompt action. Contact my office today to schedule a confidential consultation regarding your matter.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="relative z-10 py-24 md:py-32">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div id="contactFormContainer" class="glass-card rounded-3xl px-8 pt-8 pb-0 md:px-12 md:pt-12 md:pb-0 border border-white/10 overflow-hidden relative fade-in-on-scroll">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                    
+                    <div class="relative z-10 !pb-0">
+                        <h3 class="font-serif text-3xl text-white mb-6">Send a Message</h3>
+                        <form id="contactForm" class="!mb-0 !pb-0">
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-medium text-zinc-400 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600 transition-colors" placeholder="John Doe">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-medium text-zinc-400 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600 transition-colors" placeholder="john@example.com">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="phone" class="block text-sm font-medium text-zinc-400 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600 transition-colors" placeholder="+254 721 485244">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-sm font-medium text-zinc-400 mb-2">Subject</label>
+                                <select id="subject" name="subject" required class="w-full px-4 py-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-white focus:outline-none focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600 transition-colors">
+                                    <option value="">Select a subject</option>
+                                    <option value="consultation">Request Consultation</option>
+                                    <option value="corporate">Corporate Law</option>
+                                    <option value="litigation">Civil Litigation</option>
+                                    <option value="family">Family Law</option>
+                                    <option value="real-estate">Real Estate</option>
+                                    <option value="ip">Intellectual Property</option>
+                                    <option value="employment">Employment Law</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-zinc-400 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600 transition-colors resize-none" placeholder="Please provide details about your legal matter..."></textarea>
+                            </div><button type="submit" class="w-full px-8 py-4 bg-white text-zinc-950 rounded-full text-sm font-semibold tracking-wide hover:bg-zinc-200 transition-all duration-300 hover:scale-[1.02] !mb-0 !mt-0">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8 fade-in-on-scroll">
+                    <!-- Contact Details -->
+                    <div class="glass-card rounded-3xl p-8 border border-white/10">
+                        <h3 class="font-serif text-3xl text-white mb-8">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <a href="tel:+254721485244" class="group flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition duration-300">
+                                <div class="p-3 rounded-full bg-zinc-900 border border-zinc-800 group-hover:border-zinc-600 transition-colors flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-zinc-500 uppercase tracking-wider mb-1">Phone</div>
+                                    <div class="text-white font-medium">+254 721 485244</div>
+                                </div>
+                            </a>
+
+                            <a href="mailto:omongeadero@gmail.com" class="group flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition duration-300">
+                                <div class="p-3 rounded-full bg-zinc-900 border border-zinc-800 group-hover:border-zinc-600 transition-colors flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-zinc-500 uppercase tracking-wider mb-1">Email</div>
+                                    <div class="text-white font-medium">omongeadero@gmail.com</div>
+                                </div>
+                            </a>
+
+                            <div class="flex items-start gap-4 p-4 rounded-xl">
+                                <div class="p-3 rounded-full bg-zinc-900 border border-zinc-800 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-zinc-500 uppercase tracking-wider mb-1">Office Location</div>
+                                    <div class="text-white font-medium">Nairobi, Kenya</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Hours -->
+                    <div class="glass-card rounded-3xl p-8 border border-white/10">
+                        <h3 class="font-serif text-3xl text-white mb-8">Office Hours</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-white/5">
+                                <span class="text-zinc-400">Monday - Friday</span>
+                                <span class="text-white font-medium">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-white/5">
+                                <span class="text-zinc-400">Saturday</span>
+                                <span class="text-white font-medium">Closed</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="text-zinc-400">Sunday</span>
+                                <span class="text-white font-medium">Closed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+                            <p class="text-sm text-emerald-400">
+                                <span class="font-semibold">Emergency consultations</span> available by appointment. Please call for urgent matters.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Response -->
+                    <div class="glass-card rounded-3xl p-8 border border-white/10">
+                        <h3 class="font-serif text-2xl text-white mb-4">Response Time</h3>
+                        <p class="text-zinc-400 leading-relaxed">
+                            We understand the urgency of legal matters. All inquiries receive a response within 24 hours during business days. For urgent matters, please call directly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-16 border-t border-white/5 bg-zinc-950/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <h3 class="font-serif text-xl text-white mb-4">Brian Adero</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                        Advocate of the High Court dedicated to delivering strategic legal solutions with unwavering integrity.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs text-zinc-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Nairobi, Kenya</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-sm text-zinc-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-sm text-zinc-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="blog.html" class="text-sm text-zinc-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-sm text-zinc-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Practice Areas -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Practice Areas</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Corporate Law</a></li>
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Civil Litigation</a></li>
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Family Law</a></li>
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Real Estate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Get In Touch</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="tel:+254721485244" class="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>+254 721 485244</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:omongeadero@gmail.com" class="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                </svg>
+                                <span>omongeadero@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-sm text-white hover:text-zinc-300 transition-colors mt-4">
+                                <span>Schedule Consultation</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-white/5">
+                <div class="text-center">
+                    <p class="text-xs text-zinc-500">© 2025 Brian Adero. All rights reserved. | <a href="privacy-policy.html" class="hover:text-zinc-400 transition-colors">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top fixed bottom-8 right-8 z-50 p-4 rounded-full bg-white text-zinc-950 shadow-2xl hover:bg-zinc-200 transition-all duration-300 hover:scale-110" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                if (mobileMenu.classList.contains('open')) {
+                    menuIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking on a link
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+
+        // IntersectionObserver for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.fade-in-on-scroll, .scale-in-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData);
+                
+                // Here you would typically send the data to a server
+                // For now, we'll just show a success message
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // Simulate form submission (replace with actual API call)
+                setTimeout(() => {
+                    submitButton.textContent = 'Message Sent!';
+                    submitButton.classList.remove('bg-white', 'hover:bg-zinc-200');
+                    submitButton.classList.add('bg-emerald-500', 'hover:bg-emerald-600');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                        submitButton.classList.remove('bg-emerald-500', 'hover:bg-emerald-600');
+                        submitButton.classList.add('bg-white', 'hover:bg-zinc-200');
+                    }, 3000);
+                }, 1000);
+                
+                // In a real implementation, you would send the data to your server:
+                // fetch('/api/contact', {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify(data)
+                // })
+                // .then(response => response.json())
+                // .then(data => {
+                //     // Handle success
+                // })
+                // .catch(error => {
+                //     // Handle error
+                // });
+            });
+        }
+    </script>
+
+</body></html>
+

@@ -1,0 +1,590 @@
+<html lang="en" class="h-full scroll-smooth"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal Blog — Brian Adero, Advocate of the High Court</title>
+<meta name="description" content="Legal insights, updates, and articles by Brian Adero, Advocate of the High Court.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Instrument Serif', 'serif'],
+      },
+      colors: {
+        gold: {
+          100: '#F9F1D8',
+          200: '#EADBB6',
+          300: '#DBC595',
+          400: '#CCB076',
+          500: '#BF9B59',
+        }
+      },
+      animation: {
+        'fade-in': 'fadeIn 1s ease-out forwards',
+        'slide-up': 'slideUp 1s ease-out forwards',
+        'scale-in': 'scaleIn 1s ease-out forwards',
+        'shimmer': 'shimmer 2s linear infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.98)' },
+          '100%': { opacity: '1', transform: 'scale(1)' }
+        },
+        shimmer: {
+          from: { backgroundPosition: '0 0' },
+          to: { backgroundPosition: '-200% 0' }
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+  /* Custom scrollbar for premium feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #09090b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Animation classes for IntersectionObserver */
+  .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .scale-in-on-scroll {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .scale-in-on-scroll.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Nav container styles */
+  .nav-container {
+    background: #09090b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Mobile menu styles */
+  .mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+  
+  /* Back to top button */
+  .back-to-top {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+</head>
+<body class="h-full bg-zinc-950 text-zinc-300 antialiased selection:bg-white/20 selection:text-white">
+
+    <!-- Gradient Background Ambience -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] opacity-20"></div>
+        <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-stone-500/5 rounded-full blur-[120px] opacity-20"></div>
+    </div>
+
+    <!-- Status Indicator (Floating) -->
+    <div class="fixed top-6 right-6 z-50 hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/50 border border-zinc-800 backdrop-blur-md animate-fade-in" style="animation-delay: 1.5s;">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="text-xs font-medium text-zinc-300 tracking-wide">Accepting new clients</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="fixed top-0 left-0 right-0 z-40 flex justify-center pt-6 transition-all duration-300">
+        <div class="nav-container rounded-full px-6 py-3 flex items-center gap-8 shadow-2xl max-w-7xl mx-auto">
+            <a href="index.html" class="font-serif text-xl text-white italic tracking-tight hover:text-white/80 transition-colors">B. Adero</a>
+            <div class="hidden sm:flex items-center gap-6 text-xs font-medium tracking-wide uppercase text-zinc-400">
+                <a href="index.html" class="nav-link hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="nav-link hover:text-white transition-colors">About</a>
+                <a href="practice-areas.html" class="nav-link hover:text-white transition-colors">Practice Areas</a>
+                <a href="blog.html" class="nav-link hover:text-white transition-colors">Blog</a>
+            </div>
+            <a href="contact.html" class="text-xs font-semibold bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition-colors">
+                Contact
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="sm:hidden p-2 text-white hover:text-zinc-300 transition-colors" aria-label="Toggle menu">
+                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-30 bg-zinc-950/95 backdrop-blur-md sm:hidden">
+        <div class="flex flex-col items-center justify-center h-full gap-8 px-6">
+            <a href="index.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Home</a>
+            <a href="about.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">About</a>
+            <a href="practice-areas.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Practice Areas</a>
+            <a href="blog.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Blog</a>
+            <a href="contact.html" class="mobile-nav-link text-2xl font-serif text-white hover:text-zinc-300 transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <!-- Blog Header -->
+    <section class="relative z-10 pt-32 pb-16 px-6 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop" alt="Legal Books and Documents" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-zinc-950/60"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto text-center fade-in-on-scroll">
+            <h1 class="font-serif text-5xl md:text-7xl text-white tracking-tight mb-6">
+                Legal Insights
+            </h1>
+            <p class="text-zinc-400 max-w-2xl mx-auto font-light text-lg">
+                Stay informed with the latest legal updates, insights, and commentary on matters affecting businesses and individuals.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="relative z-10 py-12 pb-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Blog Post 1 -->
+                <article class="group glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 fade-in-on-scroll">
+                    <div class="aspect-video bg-zinc-900 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-700">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs text-zinc-500 uppercase tracking-wider">Corporate Law</span>
+                            <span class="text-zinc-700">•</span>
+                            <span class="text-xs text-zinc-500">March 15, 2025</span>
+                        </div>
+                        <h2 class="font-serif text-2xl text-white mb-3 group-hover:text-white/90 transition-colors">
+                            Understanding Corporate Governance in Kenya
+                        </h2>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            A comprehensive guide to corporate governance frameworks and compliance requirements for businesses operating in Kenya.
+                        </p>
+                        <a href="blog-post.html" class="inline-flex items-center gap-2 text-sm text-white hover:text-zinc-300 transition-colors">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="group glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 fade-in-on-scroll">
+                    <div class="aspect-video bg-zinc-900 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-700">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs text-zinc-500 uppercase tracking-wider">Family Law</span>
+                            <span class="text-zinc-700">•</span>
+                            <span class="text-xs text-zinc-500">March 8, 2025</span>
+                        </div>
+                        <h2 class="font-serif text-2xl text-white mb-3 group-hover:text-white/90 transition-colors">
+                            Navigating Divorce Proceedings: What You Need to Know
+                        </h2>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            Essential information about the divorce process, property division, and child custody arrangements under Kenyan law.
+                        </p>
+                        <a href="blog-post.html" class="inline-flex items-center gap-2 text-sm text-white hover:text-zinc-300 transition-colors">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="group glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 fade-in-on-scroll">
+                    <div class="aspect-video bg-zinc-900 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-700">
+                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs text-zinc-500 uppercase tracking-wider">Civil Litigation</span>
+                            <span class="text-zinc-700">•</span>
+                            <span class="text-xs text-zinc-500">March 1, 2025</span>
+                        </div>
+                        <h2 class="font-serif text-2xl text-white mb-3 group-hover:text-white/90 transition-colors">
+                            Recent Changes in Contract Law: Implications for Businesses
+                        </h2>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            An analysis of recent legal developments in contract law and how they affect commercial agreements and dispute resolution.
+                        </p>
+                        <a href="blog-post.html" class="inline-flex items-center gap-2 text-sm text-white hover:text-zinc-300 transition-colors">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="group glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 fade-in-on-scroll">
+                    <div class="aspect-video bg-zinc-900 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-700">
+                                <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
+                                <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs text-zinc-500 uppercase tracking-wider">Real Estate</span>
+                            <span class="text-zinc-700">•</span>
+                            <span class="text-xs text-zinc-500">February 22, 2025</span>
+                        </div>
+                        <h2 class="font-serif text-2xl text-white mb-3 group-hover:text-white/90 transition-colors">
+                            Property Conveyancing: A Step-by-Step Guide
+                        </h2>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            Understanding the legal process of transferring property ownership and ensuring all documentation is properly executed.
+                        </p>
+                        <a href="blog-post.html" class="inline-flex items-center gap-2 text-sm text-white hover:text-zinc-300 transition-colors">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="group glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 fade-in-on-scroll">
+                    <div class="aspect-video bg-zinc-900 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-700">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 16v-4"></path>
+                                <path d="M12 8h.01"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs text-zinc-500 uppercase tracking-wider">Intellectual Property</span>
+                            <span class="text-zinc-700">•</span>
+                            <span class="text-xs text-zinc-500">February 15, 2025</span>
+                        </div>
+                        <h2 class="font-serif text-2xl text-white mb-3 group-hover:text-white/90 transition-colors">
+                            Protecting Your Intellectual Property in the Digital Age
+                        </h2>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            Key strategies for safeguarding trademarks, copyrights, and patents in an increasingly digital business environment.
+                        </p>
+                        <a href="blog-post.html" class="inline-flex items-center gap-2 text-sm text-white hover:text-zinc-300 transition-colors">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="group glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 fade-in-on-scroll">
+                    <div class="aspect-video bg-zinc-900 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-700">
+                                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-xs text-zinc-500 uppercase tracking-wider">Employment Law</span>
+                            <span class="text-zinc-700">•</span>
+                            <span class="text-xs text-zinc-500">February 8, 2025</span>
+                        </div>
+                        <h2 class="font-serif text-2xl text-white mb-3 group-hover:text-white/90 transition-colors">
+                            Employment Contracts: Rights and Obligations
+                        </h2>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            A guide to understanding employment contracts, worker rights, and employer obligations under Kenyan labor law.
+                        </p>
+                        <a href="blog-post.html" class="inline-flex items-center gap-2 text-sm text-white hover:text-zinc-300 transition-colors">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Load More / Pagination -->
+            <div class="mt-16 text-center fade-in-on-scroll">
+                <button class="px-8 py-3 glass-card rounded-full border border-white/10 text-white hover:bg-white/5 transition-all duration-300">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-16 border-t border-white/5 bg-zinc-950/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <h3 class="font-serif text-xl text-white mb-4">Brian Adero</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                        Advocate of the High Court dedicated to delivering strategic legal solutions with unwavering integrity.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs text-zinc-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Nairobi, Kenya</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-sm text-zinc-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-sm text-zinc-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="blog.html" class="text-sm text-zinc-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-sm text-zinc-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Practice Areas -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Practice Areas</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Corporate Law</a></li>
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Civil Litigation</a></li>
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Family Law</a></li>
+                        <li><a href="index.html#practice" class="text-sm text-zinc-400 hover:text-white transition-colors">Real Estate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Get In Touch</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="tel:+254721485244" class="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>+254 721 485244</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:omongeadero@gmail.com" class="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                </svg>
+                                <span>omongeadero@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-sm text-white hover:text-zinc-300 transition-colors mt-4">
+                                <span>Schedule Consultation</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-white/5">
+                <div class="text-center">
+                    <p class="text-xs text-zinc-500">© 2025 Brian Adero. All rights reserved. | <a href="privacy-policy.html" class="hover:text-zinc-400 transition-colors">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top fixed bottom-8 right-8 z-50 p-4 rounded-full bg-white text-zinc-950 shadow-2xl hover:bg-zinc-200 transition-all duration-300 hover:scale-110" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                if (mobileMenu.classList.contains('open')) {
+                    menuIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking on a link
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+
+        // IntersectionObserver for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.fade-in-on-scroll, .scale-in-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body></html>
+
