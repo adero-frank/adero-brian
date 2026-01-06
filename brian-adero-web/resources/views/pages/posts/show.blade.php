@@ -67,7 +67,7 @@
 
                     <div
                         class="prose prose-lg prose-slate dark:prose-invert max-w-none prose-headings:font-serif prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-blue-900 dark:prose-a:text-blue-400 prose-img:rounded-xl transition-colors">
-                        {!! nl2br(e($post->content)) !!}
+                        {!! $post->content !!}
                     </div>
 
                     <!-- Share / Tags Footer -->

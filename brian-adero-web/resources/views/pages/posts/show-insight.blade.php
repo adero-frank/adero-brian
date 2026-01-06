@@ -164,7 +164,7 @@
                                 color: #f8fafc;
                             }
                         </style>
-                        {!! nl2br(e($post->content)) !!}
+                        {!! $post->content !!}
                     </div>
 
                     @if($post->key_takeaways)
