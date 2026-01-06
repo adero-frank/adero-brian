@@ -1,0 +1,13 @@
+# Docker ignore file
+.git
+.gitignore
+.env.example
+README.md
+docker-compose.yml
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+vendor
+.phpunit.result.cache
+tests
