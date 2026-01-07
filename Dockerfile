@@ -1,5 +1,5 @@
-# Multi-stage build for Laravel application
-FROM php:8.2-fpm as base
+# Base image
+FROM php:8.2-fpm
 
 # Set working directory
 WORKDIR /var/www/html
@@ -15,18 +15,27 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     nginx \
-    supervisor
+    supervisor \
+    libpq-dev
 
-# Clear cache
+# Clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
+RUN docker-php-ext-install \
+    pdo_pgsql \
+    pgsql \
+    mbstring \
+    exif \
+    pcntl \
+    bcmath \
+    gd \
+    zip
 
-# Get latest Composer
+# Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Copy existing application directory
+# Copy application code
 COPY . .
 
 # Install PHP dependencies
@@ -34,18 +43,18 @@ RUN composer install --optimize-autoloader --no-dev
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html/storage \
-    && chmod -R 755 /var/www/html/bootstrap/cache
+    && chmod -R 775 storage \
+    && chmod -R 775 bootstrap/cache
 
-# Copy nginx configuration
+# Copy nginx config
 COPY docker/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY docker/nginx/default.conf /etc/nginx/sites-available/default
 
-# Copy supervisor configuration
+# Copy supervisor config
 COPY docker/supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Expose port 80
+# Expose port
 EXPOSE 80
 
-# Start supervisor
+# Start services
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
