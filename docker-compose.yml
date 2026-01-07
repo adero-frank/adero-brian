@@ -15,10 +15,9 @@ services:
       DB_CONNECTION=pgsql
       DB_HOST=db
       DB_PORT=5432
-      DB_DATABASE=laravel_app_db_a5rw
-      DB_USERNAME=laravel_app_db_a5rw_user
-      DB_PASSWORD=l9kRRjVAiW7VEXVc5g9RiuPTG5lW6ifG
-      SESSION_DRIVER=database
+      DB_DATABASE=laravel
+      DB_USERNAME=laravel
+      DB_PASSWORD=secret
     volumes:
       - ./storage:/var/www/html/storage
       - ./bootstrap/cache:/var/www/html/bootstrap/cache
@@ -26,22 +25,19 @@ services:
       - db
     networks:
       - laravel
-    command: >
-      sh -c "php artisan migrate --force &&
-             /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf"
 
   db:
     image: postgres:15
     container_name: laravel-db
     restart: unless-stopped
     environment:
-      POSTGRES_DB: laravel_app_db_a5rw
-      POSTGRES_USER: laravel_app_db_a5rw_user
-      POSTGRES_PASSWORD: l9kRRjVAiW7VEXVc5g9RiuPTG5lW6ifG
+      POSTGRES_DB: laravel
+      POSTGRES_USER: laravel
+      POSTGRES_PASSWORD: secret
     volumes:
       - dbdata:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5433:5432"
     networks:
       - laravel
 
